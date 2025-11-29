@@ -59,7 +59,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110%;    
+  width: 110%;   
   height: 110%;
   background-position: center;
   background-size: cover;
@@ -154,7 +154,6 @@ body {
   z-index: 1;
 }
 
-/* Sections */
 
 .section {
   position: relative;
