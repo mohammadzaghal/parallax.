@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: #05060b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.scene {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #304ffe 0, #05060b 60%);
+  box-shadow: 0 40px 50px rgba(0, 0, 0, 0.8);
+}
+
+
+.hero-title {
+  position: absolute;
+  z-index: 100;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Gruppo', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 3.2rem;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.hero-subtitle {
+  position: absolute;
+  z-index: 100;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;    
+  height: 110%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.layer-sky {
+  z-index: 10;
+  background-image:
+    linear-gradient(to bottom, #182848 0%, #05060b 80%),
+    url("https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?auto=compress&cs=tinysrgb&w=800");
+}
+
+
+.layer-clouds-back {
+  z-index: 20;
+  opacity: 0.9;
+  background-image:
+    url("https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=800");
+  mix-blend-mode: screen;
+}
+
+
+.layer-mountains {
+  z-index: 30;
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 50%),
+    url("https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=800");
+}
+
+
+.layer-islands {
+  z-index: 40;
+  background-image:
+    linear-gradient(to top, rgba(3, 16, 8, 0.9), transparent 40%),
+    url("https://i.imgur.com/F4xnzjU.png");
+  background-position: bottom center;
+}
+
+
+.layer-foreground {
+  z-index: 50;
+  background-image:
+    linear-gradient(to top, #05060b 10%, rgba(0, 0, 0, 0.6) 40%, transparent 100%),
+    url("https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-position: bottom center;
+}
+
+
+.object {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  z-index: 100;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+}
+
+.object-1 {
+  top: 15%;
+  left: 10%;
+}
+
+.object-2 {
+  top: 25%;
+  right: 12%;
+}
+
+.object-3 {
+  top: 60%;
+  left: 18%;
+}
+
+.object-4 {
+  top: 40%;
+  right: 25%;
+}
+
+.object-5 {
+  top: 70%;
+  left: 60%;
+}
+
+
+.content {
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/675267/pexels-photo-675267.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+/* Sections */
+
+.section {
+  position: relative;
+  padding: 6rem 0;
+  background: rgba(3, 6, 12, 0.9);
+}
+
+.section-middle {
+  background: rgba(10, 20, 15, 0.92);
+}
+
+.section-deep {
+  background: radial-gradient(circle at top, #0b132b 0, #05060b 70%);
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.section-inner h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.section-inner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+
+.section-inner code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .section-inner {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .hero-subtitle {
+    letter-spacing: 0.1rem;
+  }
+
+  .object {
+    display: none;
+  }
+
+  .section-inner h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-inner p {
+    font-size: 1rem;
+  }
+}
