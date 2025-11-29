@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Floating Forest Parallax</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scene">
+
+    <!-- HERO / PARALLAX HEADER -->
+    <header class="hero">
+      <h1 class="hero-title">Floating Forest</h1>
+      <p class="hero-subtitle">Scroll down to descend through the layers</p>
+
+      <!-- Layers with data-speed (for JS) -->
+      <div class="layer layer-sky" data-speed="0.08"></div>
+      <div class="layer layer-clouds-back" data-speed="0.16"></div>
+      <div class="layer layer-mountains" data-speed="0.28"></div>
+      <div class="layer layer-islands" data-speed="0.45"></div>
+      <div class="layer layer-foreground" data-speed="0.65"></div>
+
+      <!-- Floating objects -->
+      <img src="https://i.imgur.com/MZutMpv.png" alt="bird"
+           class="object object-1" data-speed="0.4">
+      <img src="https://i.imgur.com/yIbmDYw.png" alt="balloon"
+           class="object object-2" data-speed="0.55">
+      <img src="https://i.imgur.com/AZumOFI.png" alt="bird"
+           class="object object-3" data-speed="0.3">
+      <img src="https://i.imgur.com/MZutMpv.png" alt="leaf"
+           class="object object-4" data-speed="0.7">
+      <img src="https://i.imgur.com/yIbmDYw.png" alt="leaf"
+           class="object object-5" data-speed="0.9">
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <section class="section section-intro">
+        <div class="section-inner">
+          <h2>Entering the Canopy</h2>
+          <p>
+            You begin above the clouds, drifting slowly over a floating forest.
+            The distant sky barely moves when you scroll, while closer trees and
+            islands glide past more quickly. This difference in speed creates
+            the feeling of depth.
+          </p>
+          <p>
+            Each layer on this page has a different scroll speed. The further
+            away it is meant to feel, the smaller its speed. The closer it is,
+            the faster it responds to your scrolling.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-middle">
+        <div class="section-inner">
+          <h2>Between the Islands</h2>
+          <p>
+            In the middle layer, floating islands and tree silhouettes slide across
+            your view. Their motion is controlled with JavaScript using simple
+            <code>data-speed</code> attributes. The browser reads that value
+            and moves each element at a unique rate.
+          </p>
+          <p>
+            You can extend this idea easily: add more objects, assign a unique
+            data-speed to each, and they’ll automatically join the parallax dance.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-deep">
+        <div class="section-inner">
+          <h2>Forest Floor</h2>
+          <p>
+            Near the bottom, the forest becomes darker and the motion feels slower
+            and heavier. You could add buttons, links, or a call-to-action here
+            to invite visitors to explore more of your work or your GitHub profile.
+          </p>
+          <p>
+            This entire scene is built with layered backgrounds, absolutely
+            positioned objects, and a tiny bit of JavaScript that updates their
+            positions based on scroll.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- jQuery (for convenience, like your original) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-3gJwYp4gkL8Z8Hk7+QJc8Qv5Zt+jgvdU0qz8aDw4zQo="
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
