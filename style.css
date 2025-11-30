@@ -74,6 +74,14 @@ body {
     url("https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?auto=compress&cs=tinysrgb&w=800");
 }
 
+.layer-fireflies {
+  z-index: 45;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 150, 0.4), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(150, 255, 200, 0.4), transparent 50%);
+  mix-blend-mode: screen;
+}
+
 
 .layer-clouds-back {
   z-index: 20;
